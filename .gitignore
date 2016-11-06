@@ -1,0 +1,5 @@
+.idea
+*.bundle.js
+*.js.map
+node_modules
+dist
