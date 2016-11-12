@@ -5,9 +5,11 @@ import rootTemplate from 'app.template.html';
 
 import HomeModule from 'home/home.module';
 
-var Routes = angular.module('routes', [router, HomeModule.name]);
+var Routes = angular.module('app.routes', [router, HomeModule.name]);
 
-Routes.config(($stateProvider, $urlRouterProvider) => {
+routeConfig.$inject = ["$stateProvider", "$urlRouterProvider"];
+
+function routeConfig($stateProvider, $urlRouterProvider) {
     $stateProvider.state({
         name: 'app',
         abstract: true,
@@ -15,6 +17,8 @@ Routes.config(($stateProvider, $urlRouterProvider) => {
     });
 
     $urlRouterProvider.otherwise('/home');
-})
+}
+
+Routes.config(routeConfig);
 
 export default Routes;
