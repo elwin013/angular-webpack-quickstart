@@ -3,7 +3,7 @@ import router from 'angular-ui-router';
 
 import rootTemplate from 'app.template.html';
 
-import HomeModule from 'home/home.module';
+import HomeModule from 'controllers/home/home.module';
 
 var Routes = angular.module('app.routes', [router, HomeModule.name]);
 

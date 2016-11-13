@@ -1,6 +1,6 @@
 import angular from "angular";
-import template from 'home/home.template.html';
-import controller from 'home/home.ctrl';
+import template from './home.template.html';
+import controller from './home.ctrl';
 
 var module = angular.module('app.home', []);
 
