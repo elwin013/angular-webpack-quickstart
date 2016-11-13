@@ -1,0 +1,16 @@
+<div>
+    <h1 class="center">
+        <a href="{{ infoCtrl.githubUrl }}">angular-webpack-quickstart</a>
+    </h1>
+    <p>
+        <h2>{{ infoCtrl.description }}</h2>
+        <h3>Latest commits:</h3>
+        <div class="commit row" ng-repeat="element in infoCtrl.commits">
+            <div class="image col-md-1 col-xs-6">
+                <img ng-src="{{element.author.avatar_url}}" alt="">
+            </div>
+            <div class="date col-md-2 col-xs-6">{{ element.commit.author.date }}</div>
+            <div class="message col-md-7 col-xs-12">{{ element.commit.message }}</div>
+        </div>
+    </p>
+</div>

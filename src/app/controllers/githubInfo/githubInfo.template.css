@@ -1,0 +1,9 @@
+.commit {
+    border-bottom: 1px rgba(0, 0, 0, 0.11) solid;
+    padding: 5px 0 5px 0;
+}
+
+.commit .image img {
+    width: 48px;
+    height: 48px;
+}
