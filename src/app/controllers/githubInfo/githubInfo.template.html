@@ -5,12 +5,14 @@
     <p>
         <h2>{{ infoCtrl.description }}</h2>
         <h3>Latest commits:</h3>
-        <div class="commit row" ng-repeat="element in infoCtrl.commits">
-            <div class="image col-md-1 col-xs-6">
-                <img ng-src="{{element.author.avatar_url}}" alt="">
-            </div>
-            <div class="date col-md-2 col-xs-6">{{ element.commit.author.date }}</div>
-            <div class="message col-md-7 col-xs-12">{{ element.commit.message }}</div>
-        </div>
+        <table class="table table-striped">
+            <tr class="commit" ng-repeat="element in infoCtrl.commits">
+                <td class="image">
+                    <img ng-src="{{element.author.avatar_url}}" alt="">
+                </td>
+                <td class="date">{{ element.commit.author.date }}</td>
+                <td class="message">{{ element.commit.message }}</td>
+            </tr>
+        </table>
     </p>
 </div>
