@@ -15,6 +15,5 @@ class GithubInfoService {
 
 GithubInfoService.$inject = ['$http'];
 
-export default angular.module('app.services.githubInfo', [])
-    .service('GithubInfoService', GithubInfoService);
+export default GithubInfoService;
 
