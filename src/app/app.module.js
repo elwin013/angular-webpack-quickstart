@@ -3,5 +3,6 @@ import "app.style.css";
 
 import Routes from "app.routes";
 import Services from "services/services.module";
+import Components from "components/components.module"
 
-export default angular.module('app', [Routes.name, Services.name]);
+export default angular.module('app', [Routes.name, Services.name, Components.name]);
