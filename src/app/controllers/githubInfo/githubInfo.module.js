@@ -10,7 +10,7 @@ routeConfig.$inject = ["$stateProvider"];
 function routeConfig($stateProvider) {
     $stateProvider.state({
         name: 'app.info',
-        url: '/exampleService',
+        url: '/githubInfo',
         template,
         controller,
         controllerAs: 'infoCtrl'

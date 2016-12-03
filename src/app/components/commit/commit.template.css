@@ -1,0 +1,25 @@
+.commit {
+    display: inline-block;
+    font-size: 12pt;
+    padding: 5px 0px 5px 0px;
+    border-bottom: 1px solid #d3d3d3;
+    width: 100%;
+}
+
+.commit .image img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.commit .image, .commit .data, .commit .message {
+    float: left;
+}
+.commit .image {
+    width: 10%;
+}
+
+.commit .data {}
+
+.commit .message, .commit .data {
+    width: 90%;
+}

@@ -1,9 +1,9 @@
 import angular from 'angular';
 
-import helloWorldDirective from './helloWorld/helloWorld.directive'
+import commitDirective from './commit/commit.directive'
 
 var module = angular.module('app.components', []);
 
-module.directive('helloWorld', helloWorldDirective);
+module.directive('commit', commitDirective);
 
 export default module;

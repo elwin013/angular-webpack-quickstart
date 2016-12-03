@@ -18,7 +18,7 @@ npm start
 ```
 Now you can open [localhost:8080](http://locahost:8080) in you browser.
 
-At [localhost:8080/#/exampleService](http://localhost:8080/#/exampleService) you can access example page which loads data from GitHub API. 
+At [localhost:8080/#/githubInfo](http://localhost:8080/#/githubInfo) you can access example page which loads data from GitHub API. 
 
 ### Dependencies
 > For version look into package.json!
