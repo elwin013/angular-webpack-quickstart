@@ -1,3 +1,7 @@
+/*
+ * app.module.js
+ * Main file of app.
+ */
 import "bootstrap/dist/css/bootstrap.min.css";
 import "app.style.css";
 

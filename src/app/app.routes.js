@@ -1,3 +1,8 @@
+/*
+ * app.routes.js
+ * Router configuration of app.
+ * In this file we're importing controller submodules.
+ */
 import angular from 'angular';
 import router from 'angular-ui-router';
 
