@@ -1,6 +1,7 @@
 'use strict';
 const webpack = require('webpack');
 const copyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = function makeWebpackConfig() {
     var config = {};
@@ -11,11 +12,11 @@ module.exports = function makeWebpackConfig() {
     };
 
     config.resolve = {
-        modulesDirectories: ['node_modules', 'src/app']
+        modules: ['node_modules', path.resolve(__dirname, "src/app")]
     };
 
     config.output = {
-        path: './dist/',
+        path: path.resolve(__dirname, "dist"),
         filename: '[name].bundle.js'
     };
 
@@ -26,9 +27,9 @@ module.exports = function makeWebpackConfig() {
     };
 
     config.module = {
-        loaders: [{
+        rules: [{
             test: /\.js/,
-            loader: 'babel',
+            loader: 'babel-loader',
             exclude: /node_modules/,
             query: {
                 presets: ['es2015']
@@ -38,10 +39,10 @@ module.exports = function makeWebpackConfig() {
             loader: "style-loader!css-loader"
         }, {
             test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-            loader: 'file'
+            loader: 'file-loader'
         }, {
             test: /\.html$/,
-            loader: 'raw'
+            loader: 'raw-loader'
         }]
     };
 
@@ -63,7 +64,7 @@ module.exports = function makeWebpackConfig() {
 
         // Splitting modules into two files - all from vendors goes to vendor.bundle.js
         // see: https://webpack.github.io/docs/code-splitting.html#split-app-and-vendor-code
-        new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js"),
+        new webpack.optimize.CommonsChunkPlugin({name: "vendor", filename: "vendor.bundle.js"}),
 
         // Minimize and uglify code.
         // see: https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
