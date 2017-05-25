@@ -3,8 +3,10 @@
   "version": "0.2.0",
   "description": "Simple starter for AngularJS and Bootstrap using Webpack.",
   "scripts": {
-    "build": "rimraf dist && webpack --config webpack.config.js --progress --profile --bail",
-    "server": "webpack-dev-server --history-api-fallback --inline --content-base dist/",
+    "clean" : "rimraf dist",
+    "prebuild" : "npm run clean",
+    "build": "webpack --config webpack.config.js --progress --profile --bail",
+    "server": "webpack-dev-server --inline --content-base dist/",
     "start": "npm run server"
   },
   "repository": {
